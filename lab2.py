@@ -72,7 +72,7 @@ def is_input():
             output = int(output)
             input_integer = True
         else:
-            print("Intergers, please.")
+            print("Integers, please.")
 
     return output
 
