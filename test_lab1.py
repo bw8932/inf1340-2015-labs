@@ -8,7 +8,7 @@ __copyright__ = "2015 Susan Sim"
 __license__ = "MIT License"
 
 import mock
-from lab1_solution import vowel_or_consonant
+from lab1 import vowel_or_consonant
 
 
 def test_vowel_or_consonant(capsys):
