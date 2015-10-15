@@ -17,22 +17,22 @@ entered. A legal value is any integer.
 
 """
 
-def get_input():
+def get_user_input():
+    output = ""
+    output = raw_input("number of sides")
 
-    raw = raw_input("Please input an integer")
+    input_is_an_integer = True
 
-    if raw.isdigit():
-        output = raw
-        return output
+    if output.isdigit():
+         return int(output)
 
-    elif raw[0] == "-" and raw[1:].isdigit():
-        output = raw
-        return output
+    elif output[0] == "-" and output[1:].isdigit():
+        return int(output)
+
     else:
+        get_user_input()
 
-
-
-
+    return int(output)
 
 def name_that_shape():
     """
@@ -54,8 +54,7 @@ def name_that_shape():
     Errors: ValueError when input is a string or float
 
     """
-
-    sides = int(raw_input("Number of sides:"))
+    sides = get_user_input()
 
     if sides == 3:
         print("triangle")
@@ -76,4 +75,4 @@ def name_that_shape():
     else:
         print("Error")
 
-# name_that_shape()
+name_that_shape()
