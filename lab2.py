@@ -17,6 +17,23 @@ entered. A legal value is any integer.
 
 """
 
+def get_input():
+
+    raw = raw_input("Please input an integer")
+
+    if raw.isdigit():
+        output = raw
+        return output
+
+    elif raw[0] == "-" and raw[1:].isdigit():
+        output = raw
+        return output
+    else:
+
+
+
+
+
 def name_that_shape():
     """
     For a given number of sides in a regular polygon, returns the shape name
