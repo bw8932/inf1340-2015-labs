@@ -77,5 +77,5 @@ def is_input():
     return output
 
 
-#name_that_shape()
+name_that_shape()
 
