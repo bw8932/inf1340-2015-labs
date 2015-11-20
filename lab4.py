@@ -18,11 +18,32 @@ __license__ = "MIT License"
 # Rewrite this code to use global constants, local variables and functions
 # Output the text to a file instead of printing it
 
+PROVINCIAL_ST = .05
+FEDERAL_ST = .025
+
+
+def prov_tax(purchase):
+    prov_tax_value = purchase * PROVINCIAL_ST
+    #print ("Provincial tax: {0:.2f}".format(prov_tax_value))
+    return prov_tax_value
+
+def fed_tax(purchase):
+    fed_tax_value = purchase * FEDERAL_ST
+   # print ("Federal tax: {0:.2f}".format(fed_tax_value))
+    return fed_tax_value
 
 def bill_of_sale(purchase):
 
-    print ("Amount of purchase: {0:.2f}".format(purchase))
-    print ("Provincial tax: {0:.2f}".format(purchase * .05))
-    print ("Federal tax: {0:.2f}".format(purchase * .025))
-    print ("Total tax: {0:.2f}".format(purchase * .075))
-    print ("Total sale: {0:.2f}".format(purchase * 1.075))
+    provincial_tax = prov_tax(purchase)
+    federal_tax = fed_tax(purchase)
+    total_tax = federal_tax + provincial_tax
+    total_sale = purchase + total_tax
+
+    with open("costs.txt", 'w') as output_file:
+        output_file.write("Federal Tax: {0:.2f}".format(federal_tax))
+        output_file.write("\n Provincial Tax: {0:.2f}".format(provincial_tax))
+        output_file.write("\n Total Tax: {0:.2f}".format(total_tax))
+        output_file.write("\n Total Sale: {0:.2f}".format(total_sale))
+
+bill_of_sale(100)
+
