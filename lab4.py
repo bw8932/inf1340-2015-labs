@@ -24,12 +24,10 @@ FEDERAL_ST = .025
 
 def prov_tax(purchase):
     prov_tax_value = purchase * PROVINCIAL_ST
-    #print ("Provincial tax: {0:.2f}".format(prov_tax_value))
     return prov_tax_value
 
 def fed_tax(purchase):
     fed_tax_value = purchase * FEDERAL_ST
-   # print ("Federal tax: {0:.2f}".format(fed_tax_value))
     return fed_tax_value
 
 def bill_of_sale(purchase):
@@ -45,5 +43,5 @@ def bill_of_sale(purchase):
         output_file.write("\n Total Tax: {0:.2f}".format(total_tax))
         output_file.write("\n Total Sale: {0:.2f}".format(total_sale))
 
-bill_of_sale(100)
+bill_of_sale(33)
 
