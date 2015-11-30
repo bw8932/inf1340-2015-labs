@@ -43,5 +43,5 @@ def bill_of_sale(purchase):
         output_file.write("\n Total Tax: {0:.2f}".format(total_tax))
         output_file.write("\n Total Sale: {0:.2f}".format(total_sale))
 
-bill_of_sale(33)
+#bill_of_sale(33)
 
