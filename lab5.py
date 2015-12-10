@@ -81,7 +81,7 @@ class NameThatShapeGUI:
             self.value.set(shape)
 
     def error_message(self):
-        tkMessageBox.showinfo("Error!!!", self.side_entry.get() + " is invalid input. Fix it.")
+        tkMessageBox.showinfo("Error!", self.side_entry.get() + " is invalid input. Fix it.")
 
 
 # Instantiating the object
